@@ -1,3 +1,4 @@
+#include <iostream>
 #include <fstream>
 #include <vector>
 #include <queue>
@@ -10,8 +11,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
     vector<int> distances(numVertices, INF);
     vector<bool> visited(numVertices, false);
     distances[source] = 0;
-    previous[source] = NULL;
-    priorityqueue <pair<int, int>> minHeap;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> minHeap;
     minHeap.push({source, 0});
     while (!minHeap.empty()) {
         int u = minHeap.top().first;
@@ -43,6 +43,6 @@ vector<int> extract_shortest_path(const vector<int>& distances, const vector<int
 void print_path(const vector<int>& v, int total) {
     cout << total << endl;
     for (auto item: v) {
-        cout << v << ' ';
+        cout << item << ' ';
     }
 }

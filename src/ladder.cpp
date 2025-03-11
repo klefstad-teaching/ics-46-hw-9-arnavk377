@@ -18,8 +18,8 @@ void error(string word1, string word2, string msg) {
 bool edit_distance_within(const std::string& str1, const std::string& str2, int d) {
     if (str1.length() == str2.length()) {
         int diff = 0;
-        for (int i = 0; i < word1.length(); i++) {
-            if (word1[i] != word2[i]) { diff++; }
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1[i] != str2[i]) { diff++; }
         }
         return diff == d;
     }
@@ -42,7 +42,7 @@ bool is_adjacent(const string& word1, const string& word2) {
 }
 
 vector<string> generate_word_ladder(const string& begin_word, const string& end_word, const set<string>& word_list) {
-    if (word_list.find(end_word) == word_list.end()) { return; }
+    if (word_list.find(end_word) == word_list.end()) { return {}; }
     queue<vector<string>> q;
     set<string> visited;  
     q.push({begin_word});
@@ -51,8 +51,7 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
         int q_size = q.size();
         set<string> q_visited;
         for (int i = 0; i < q_size; i++) {
-            vector<string> path;
-            path.push_back(q.front());
+            vector<string> path = q.front();
             q.pop();
             string last = path.back();
             if (last == end_word) { return path; }
