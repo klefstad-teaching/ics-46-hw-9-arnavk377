@@ -142,12 +142,74 @@ ladder_main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ladder_main.dir/build.make CMakeFiles/ladder_main.dir/build
 .PHONY : ladder_main/fast
 
+#=============================================================================
+# Target rules for targets named student_gtests
+
+# Build rule for target.
+student_gtests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 student_gtests
+.PHONY : student_gtests
+
+# fast build rule for target.
+student_gtests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/build
+.PHONY : student_gtests/fast
+
+gtest/gtestmain.o: gtest/gtestmain.cpp.o
+.PHONY : gtest/gtestmain.o
+
+# target to build an object file
+gtest/gtestmain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/gtest/gtestmain.cpp.o
+.PHONY : gtest/gtestmain.cpp.o
+
+gtest/gtestmain.i: gtest/gtestmain.cpp.i
+.PHONY : gtest/gtestmain.i
+
+# target to preprocess a source file
+gtest/gtestmain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/gtest/gtestmain.cpp.i
+.PHONY : gtest/gtestmain.cpp.i
+
+gtest/gtestmain.s: gtest/gtestmain.cpp.s
+.PHONY : gtest/gtestmain.s
+
+# target to generate assembly for a file
+gtest/gtestmain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/gtest/gtestmain.cpp.s
+.PHONY : gtest/gtestmain.cpp.s
+
+gtest/student_gtests.o: gtest/student_gtests.cpp.o
+.PHONY : gtest/student_gtests.o
+
+# target to build an object file
+gtest/student_gtests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/gtest/student_gtests.cpp.o
+.PHONY : gtest/student_gtests.cpp.o
+
+gtest/student_gtests.i: gtest/student_gtests.cpp.i
+.PHONY : gtest/student_gtests.i
+
+# target to preprocess a source file
+gtest/student_gtests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/gtest/student_gtests.cpp.i
+.PHONY : gtest/student_gtests.cpp.i
+
+gtest/student_gtests.s: gtest/student_gtests.cpp.s
+.PHONY : gtest/student_gtests.s
+
+# target to generate assembly for a file
+gtest/student_gtests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/gtest/student_gtests.cpp.s
+.PHONY : gtest/student_gtests.cpp.s
+
 src/dijkstras.o: src/dijkstras.cpp.o
 .PHONY : src/dijkstras.o
 
 # target to build an object file
 src/dijkstras.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dijkstra_main.dir/build.make CMakeFiles/dijkstra_main.dir/src/dijkstras.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/src/dijkstras.cpp.o
 .PHONY : src/dijkstras.cpp.o
 
 src/dijkstras.i: src/dijkstras.cpp.i
@@ -156,6 +218,7 @@ src/dijkstras.i: src/dijkstras.cpp.i
 # target to preprocess a source file
 src/dijkstras.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dijkstra_main.dir/build.make CMakeFiles/dijkstra_main.dir/src/dijkstras.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/src/dijkstras.cpp.i
 .PHONY : src/dijkstras.cpp.i
 
 src/dijkstras.s: src/dijkstras.cpp.s
@@ -164,6 +227,7 @@ src/dijkstras.s: src/dijkstras.cpp.s
 # target to generate assembly for a file
 src/dijkstras.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dijkstra_main.dir/build.make CMakeFiles/dijkstra_main.dir/src/dijkstras.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/src/dijkstras.cpp.s
 .PHONY : src/dijkstras.cpp.s
 
 src/dijkstras_main.o: src/dijkstras_main.cpp.o
@@ -196,6 +260,7 @@ src/ladder.o: src/ladder.cpp.o
 # target to build an object file
 src/ladder.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ladder_main.dir/build.make CMakeFiles/ladder_main.dir/src/ladder.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/src/ladder.cpp.o
 .PHONY : src/ladder.cpp.o
 
 src/ladder.i: src/ladder.cpp.i
@@ -204,6 +269,7 @@ src/ladder.i: src/ladder.cpp.i
 # target to preprocess a source file
 src/ladder.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ladder_main.dir/build.make CMakeFiles/ladder_main.dir/src/ladder.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/src/ladder.cpp.i
 .PHONY : src/ladder.cpp.i
 
 src/ladder.s: src/ladder.cpp.s
@@ -212,6 +278,7 @@ src/ladder.s: src/ladder.cpp.s
 # target to generate assembly for a file
 src/ladder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ladder_main.dir/build.make CMakeFiles/ladder_main.dir/src/ladder.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/src/ladder.cpp.s
 .PHONY : src/ladder.cpp.s
 
 src/ladder_main.o: src/ladder_main.cpp.o
@@ -248,6 +315,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... dijkstra_main"
 	@echo "... ladder_main"
+	@echo "... student_gtests"
+	@echo "... gtest/gtestmain.o"
+	@echo "... gtest/gtestmain.i"
+	@echo "... gtest/gtestmain.s"
+	@echo "... gtest/student_gtests.o"
+	@echo "... gtest/student_gtests.i"
+	@echo "... gtest/student_gtests.s"
 	@echo "... src/dijkstras.o"
 	@echo "... src/dijkstras.i"
 	@echo "... src/dijkstras.s"

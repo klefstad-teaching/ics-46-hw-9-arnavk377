@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/akanekar/ics46/ics-46-hw-9-arnavk377/build
 # The main recursive "all" target.
 all: CMakeFiles/dijkstra_main.dir/all
 all: CMakeFiles/ladder_main.dir/all
+all: CMakeFiles/student_gtests.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +75,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/dijkstra_main.dir/clean
 clean: CMakeFiles/ladder_main.dir/clean
+clean: CMakeFiles/student_gtests.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -127,6 +129,32 @@ ladder_main: CMakeFiles/ladder_main.dir/rule
 CMakeFiles/ladder_main.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ladder_main.dir/build.make CMakeFiles/ladder_main.dir/clean
 .PHONY : CMakeFiles/ladder_main.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/student_gtests.dir
+
+# All Build rule for target.
+CMakeFiles/student_gtests.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/akanekar/ics46/ics-46-hw-9-arnavk377/build/CMakeFiles --progress-num=7,8,9,10,11 "Built target student_gtests"
+.PHONY : CMakeFiles/student_gtests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/student_gtests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akanekar/ics46/ics-46-hw-9-arnavk377/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/student_gtests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/akanekar/ics46/ics-46-hw-9-arnavk377/build/CMakeFiles 0
+.PHONY : CMakeFiles/student_gtests.dir/rule
+
+# Convenience name for target.
+student_gtests: CMakeFiles/student_gtests.dir/rule
+.PHONY : student_gtests
+
+# clean rule for target.
+CMakeFiles/student_gtests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/student_gtests.dir/build.make CMakeFiles/student_gtests.dir/clean
+.PHONY : CMakeFiles/student_gtests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

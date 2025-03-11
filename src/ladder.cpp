@@ -7,6 +7,7 @@
 #include <string>
 #include <cmath>
 #include "ladder.h"
+#define my_assert(e) {cout << #e << ((e) ? " passed": " failed") << endl;}
 
 using namespace std;
 
@@ -33,6 +34,7 @@ bool edit_distance_within(const std::string& str1, const std::string& str2, int 
             if (str1[i + skips] == str2[i]) { i++; }
             else { skips++; }
         }
+        if (skips == 0) { return str1.length() == (str2.length() + d); }
         return (skips == d) && (skips + str2.length() == str1.length());
     }
 }
@@ -57,7 +59,7 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
             string last = path.back();
             if (last == end_word) { return path; }
             for (auto word: word_list) {
-                if (visited.find(word) == visited.end() && is_adjacent(word, last)) {
+                if (visited.find(word) == visited.end() && is_adjacent(last, word)) {
                     vector<string> new_path = path;
                     new_path.push_back(word);
                     q.push(new_path);
@@ -87,4 +89,13 @@ void print_word_ladder(const vector<string>& ladder) {
     }
 }
 
-void verify_word_ladder();
+void verify_word_ladder() {
+    set<string> word_list;
+    load_words(word_list, "words.txt");
+    my_assert(generate_word_ladder("cat", "dog", word_list).size() == 4);
+    my_assert(generate_word_ladder("marty", "curls", word_list).size() == 6);
+    my_assert(generate_word_ladder("code", "data", word_list).size() == 6);
+    my_assert(generate_word_ladder("work", "play", word_list).size() == 6);
+    my_assert(generate_word_ladder("sleep", "awake", word_list).size() == 8);
+    my_assert(generate_word_ladder("car", "cheat", word_list).size() == 4);
+}
