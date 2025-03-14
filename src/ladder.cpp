@@ -76,11 +76,11 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
 
 void load_words(set<string> & word_list, const string& file_name) {
     ifstream in(file_name);
-    string word;
     if (!in) {
         cerr << "Error opening file: " << file_name << endl;
         return;
     }
+    string word;
     while (in >> word) {
         word_list.insert(word);
     }
