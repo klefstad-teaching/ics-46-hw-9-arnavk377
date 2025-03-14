@@ -26,7 +26,6 @@ struct Edge {
 };
 
 struct Graph : public vector<vector<Edge>> {
-    Graph(int n) : vector<vector<Edge>>(n), numVertices(n) {}
     int numVertices=0;
 };
 
